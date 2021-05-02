@@ -4,7 +4,7 @@ import "./fontawesome";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import dashboard from "./dashboard";
 import createAlunos from "./createAlunos";
-import editAlunos from "./editAlunos";
+import EditAlunos from "./EditAlunos";
 import "../../css/app.css";
 
 function Example() {
@@ -14,7 +14,7 @@ function Example() {
                 <Switch>
                     <Route path="/dashboard" exact component={dashboard} />
                     <Route path="/addAlunos" exact component={createAlunos} />
-                    <Route path="/edit/:id" exact component={editAlunos} />
+                    <Route path="/edit/:id" exact component={EditAlunos} />
                 </Switch>
             </>
         </Router>
@@ -23,6 +23,6 @@ function Example() {
 
 export default Example;
 
-if (document.getElementById('example')) {
-    ReactDOM.render(<Example />, document.getElementById('example'));
+if (document.getElementById('Example')) {
+    ReactDOM.render(<Example />, document.getElementById('Example'));
 }
