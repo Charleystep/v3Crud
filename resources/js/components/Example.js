@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-//import "./fontawesome";
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import "./fontawesome";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import dashboard from "./dashboard";
 import createAlunos from "./createAlunos";
 import editAlunos from "./editAlunos";
