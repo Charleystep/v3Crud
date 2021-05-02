@@ -21,10 +21,10 @@ class dashboard extends React.Component {
         return (
             <div className="layout">
                 <div className="sidebar">
-                    <h1>Your</h1>
+                    <h1>Sua</h1>
                     <h1>Dashboard</h1>
                     <div className="actionBtn">
-                        <button className="active"><Link to="/"><FontAwesomeIcon icon="home" className="icon" />Home</Link></button>
+                        <button className="active"><Link to="/"><FontAwesomeIcon icon="home" className="icon" />Inicio</Link></button>
                         <button className="unactive"><FontAwesomeIcon icon="desktop" className="icon" />Dashboard</button>
                         <button className="active"><Link to="/addPosts"><FontAwesomeIcon icon="pencil-alt" className="icon" />Cadastrar Alunos</Link></button>
                     </div>
