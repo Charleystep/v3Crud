@@ -74,7 +74,7 @@ class createAlunos extends React.Component {
                             </div>
                             <div className="form-group">
                                 <label>Serie:</label>
-                                <select type="text" name="serie" className="form-control highlight"
+                                <select type="set" name="serie" className="form-control highlight"
                                     value={this.state.serie} onChange={this.handleInput}
                                     placeholder="Selecione a Serie" required>
                                     <option value="1_ano">1o ano</option>
@@ -90,7 +90,7 @@ class createAlunos extends React.Component {
                             </div>
                             <div className="form-group">
                                 <label>CEP:</label>
-                                <textarea type="number" name="cep" className="form-control highlight"
+                                <textarea type="decimal" name="cep" className="form-control highlight"
                                     value={this.state.cep} onChange={this.handleInput}
                                     placeholder="Insira seu CEP" required />
                             </div>
@@ -102,7 +102,7 @@ class createAlunos extends React.Component {
                             </div>
                             <div className="form-group">
                                 <label>Número:</label>
-                                <textarea type="number" name="numero" className="form-control highlight"
+                                <textarea type="decimal" name="numero" className="form-control highlight"
                                     value={this.state.numero} onChange={this.handleInput}
                                     placeholder="Numero" required />
                             </div>
@@ -138,15 +138,21 @@ class createAlunos extends React.Component {
                             </div>
                             <div className="form-group">
                                 <label>CPF:</label>
-                                <textarea type="number" name="cpfMae" className="form-control highlight"
+                                <textarea type="decimal" name="cpfMae" className="form-control highlight"
                                     value={this.state.cpfMae} onChange={this.handleInput}
                                     placeholder="CPF, apenas numeros" required />
                             </div>
                             <div className="form-group">
                                 <label>Melhor data de pagamento:</label>
-                                <textarea type="date" name="dataPag" className="form-control highlight"
+                                <textarea type="set" name="dataPag" className="form-control highlight"
                                     value={this.state.dataPag} onChange={this.handleInput}
-                                    placeholder="Selecione um data" required />
+                                    placeholder="Selecione um data" required>
+                                    <option value="5">5</option>
+                                    <option value="10">10</option>
+                                    <option value="15">15</option>
+                                    <option value="20">20</option>
+                                    <option value="25">25</option>
+                                </textarea>
                             </div>
 
                             <div className="form-group">

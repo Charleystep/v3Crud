@@ -12635,7 +12635,7 @@ var createAlunos = /*#__PURE__*/function (_React$Component) {
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("label", {
                   children: "Serie:"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("select", {
-                  type: "text",
+                  type: "set",
                   name: "serie",
                   className: "form-control highlight",
                   value: this.state.serie,
@@ -12676,7 +12676,7 @@ var createAlunos = /*#__PURE__*/function (_React$Component) {
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("label", {
                   children: "CEP:"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("textarea", {
-                  type: "number",
+                  type: "decimal",
                   name: "cep",
                   className: "form-control highlight",
                   value: this.state.cep,
@@ -12702,7 +12702,7 @@ var createAlunos = /*#__PURE__*/function (_React$Component) {
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("label", {
                   children: "N\xFAmero:"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("textarea", {
-                  type: "number",
+                  type: "decimal",
                   name: "numero",
                   className: "form-control highlight",
                   value: this.state.numero,
@@ -12780,7 +12780,7 @@ var createAlunos = /*#__PURE__*/function (_React$Component) {
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("label", {
                   children: "CPF:"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("textarea", {
-                  type: "number",
+                  type: "decimal",
                   name: "cpfMae",
                   className: "form-control highlight",
                   value: this.state.cpfMae,
@@ -12792,14 +12792,30 @@ var createAlunos = /*#__PURE__*/function (_React$Component) {
                 className: "form-group",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("label", {
                   children: "Melhor data de pagamento:"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("textarea", {
-                  type: "date",
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("textarea", {
+                  type: "set",
                   name: "dataPag",
                   className: "form-control highlight",
                   value: this.state.dataPag,
                   onChange: this.handleInput,
                   placeholder: "Selecione um data",
-                  required: true
+                  required: true,
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("option", {
+                    value: "5",
+                    children: "5"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("option", {
+                    value: "10",
+                    children: "10"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("option", {
+                    value: "15",
+                    children: "15"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("option", {
+                    value: "20",
+                    children: "20"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("option", {
+                    value: "25",
+                    children: "25"
+                  })]
                 })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
                 className: "form-group",
