@@ -28,23 +28,28 @@ body{
 
 h1{
     font-family: "Lato";
+    font-size: larger ;
     color: #193b68;
 }
 h3{
     font-family: 'Lato';
+    font-size: larger ;
     color: #1470ff;
 }
 h2{
     font-family: "Lato";
+    font-size: larger ;
     color: #193b68;
     text-transform: uppercase;
 }
 h5{
     color: #193b68;
+    font-size: larger ;
     font-family: "Lato";
 }
 h6{
     margin-top: 5px;
+    font-size: larger ;
     color: #000000bf;
 }
 hr{
@@ -104,7 +109,7 @@ label{
 .highlight{
     border: 1px solid #1470ff;
 }
-.post{
+.aluno{
     width: 100%;
     background-color: white;
     padding: 15px;
@@ -210,7 +215,7 @@ label{
     width: 100%;
     background-color: white;
     box-shadow:0px 15px 25px #1470ff66;
-    border-radius: 10px;
+    border-radius: 20px;
     border: 2px solid #1470ff;
     padding: 20px;
 }
@@ -246,7 +251,7 @@ p{
     display: flex;
     padding: 10px;
 }
-@media screen and (max-width:1000px){
+@media screen and (max-width:100px){
     .right-sidebar{
         display: none;
     }

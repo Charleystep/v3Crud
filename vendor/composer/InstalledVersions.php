@@ -27,12 +27,12 @@ class InstalledVersions
 private static $installed = array (
   'root' => 
   array (
-    'pretty_version' => '1.0.0+no-version-set',
-    'version' => '1.0.0.0',
+    'pretty_version' => 'dev-master',
+    'version' => 'dev-master',
     'aliases' => 
     array (
     ),
-    'reference' => NULL,
+    'reference' => '4821491c776fcaee4233986d99745b1cc601fb36',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -457,12 +457,12 @@ private static $installed = array (
     ),
     'laravel/laravel' => 
     array (
-      'pretty_version' => '1.0.0+no-version-set',
-      'version' => '1.0.0.0',
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
       'aliases' => 
       array (
       ),
-      'reference' => NULL,
+      'reference' => '4821491c776fcaee4233986d99745b1cc601fb36',
     ),
     'laravel/sail' => 
     array (
@@ -490,6 +490,15 @@ private static $installed = array (
       array (
       ),
       'reference' => 'e2478cd0342a92ec1c8c77422553bda8ee004fd0',
+    ),
+    'laravellegends/pt-br-validator' => 
+    array (
+      'pretty_version' => '8.0.2',
+      'version' => '8.0.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'd41f9d3a9a4e1791dbf6c09f2070d6c6648c2fc7',
     ),
     'league/commonmark' => 
     array (

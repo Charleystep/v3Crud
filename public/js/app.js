@@ -11999,7 +11999,7 @@ var Alunos = /*#__PURE__*/function (_React$Component) {
           switch (_context.prev = _context.next) {
             case 0:
               _context.next = 2;
-              return axios__WEBPACK_IMPORTED_MODULE_2___default().get("/addAluno");
+              return axios__WEBPACK_IMPORTED_MODULE_2___default().get("/createAlunos");
 
             case 2:
               res = _context.sent;
@@ -12030,7 +12030,7 @@ var Alunos = /*#__PURE__*/function (_React$Component) {
             switch (_context2.prev = _context2.next) {
               case 0:
                 _context2.next = 2;
-                return axios__WEBPACK_IMPORTED_MODULE_2___default().delete("/addAluno/".concat(id));
+                return axios__WEBPACK_IMPORTED_MODULE_2___default().delete("/createAlunos/".concat(id));
 
               case 2:
                 res = _context2.sent;
@@ -12076,7 +12076,7 @@ var Alunos = /*#__PURE__*/function (_React$Component) {
           children: this.state.alunos.map(function (alunos) {
             return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_Data__WEBPACK_IMPORTED_MODULE_3__.default, {
               alunos: alunos,
-              deletePost: _this2.deletePost
+              deleteAluno: _this2.deleteAluno
             }, alunos.id);
           })
         });
@@ -12160,7 +12160,7 @@ var Data = /*#__PURE__*/function (_React$Component) {
 
     _this = _super.call.apply(_super, [this].concat(args));
 
-    _defineProperty(_assertThisInitialized(_this), "delPost", function (id) {
+    _defineProperty(_assertThisInitialized(_this), "deleteAluno", function (id) {
       alert("Are You Want To Delete This Aluno");
 
       _this.props.deleteAluno(id);
@@ -12224,17 +12224,17 @@ var Data = /*#__PURE__*/function (_React$Component) {
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
                   icon: "edit",
                   className: "icon"
-                }), "Edit"]
+                }), "Atualizar"]
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("button", {
               className: "delete",
               onClick: function onClick() {
-                return _this2.delPost(alunos.id);
+                return _this2.deleteAluno(alunos.id);
               },
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
                 icon: "trash-alt",
                 className: "icon"
-              }), "Delete"]
+              }), "Deletar"]
             })]
           })]
         })]
@@ -12341,7 +12341,7 @@ var EditAlunos = /*#__PURE__*/function (_React$Component) {
       _this.setState(_defineProperty({}, e.target.name, e.target.value));
     });
 
-    _defineProperty(_assertThisInitialized(_this), "updatePost", /*#__PURE__*/function () {
+    _defineProperty(_assertThisInitialized(_this), "updateAluno", /*#__PURE__*/function () {
       var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee(e) {
         var id, res;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
@@ -12351,7 +12351,7 @@ var EditAlunos = /*#__PURE__*/function (_React$Component) {
                 e.preventDefault();
                 id = _this.props.match.params.id;
                 _context.next = 4;
-                return axios__WEBPACK_IMPORTED_MODULE_2___default().patch("/addAluno/".concat(id), _this.state);
+                return axios__WEBPACK_IMPORTED_MODULE_2___default().patch("/createAlunos/".concat(id), _this.state);
 
               case 4:
                 res = _context.sent;
@@ -12387,7 +12387,7 @@ var EditAlunos = /*#__PURE__*/function (_React$Component) {
               case 0:
                 id = this.props.match.params.id;
                 _context2.next = 3;
-                return axios__WEBPACK_IMPORTED_MODULE_2___default().get("/addAluno/".concat(id, "/edit"));
+                return axios__WEBPACK_IMPORTED_MODULE_2___default().get("/createAlunos/".concat(id, "/edit"));
 
               case 3:
                 res = _context2.sent;
@@ -12513,14 +12513,14 @@ var EditAlunos = /*#__PURE__*/function (_React$Component) {
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
             className: "Formdiv",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("form", {
-              onSubmit: this.updateAluno,
+              onSubmit: this.EditAlunos,
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
                 className: "form-group",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("label", {
                   children: "Nome:"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", {
                   type: "text",
-                  name: "nome",
+                  name: "name",
                   className: "form-control highlight",
                   value: this.state.name,
                   onChange: this.handleInput,
@@ -12531,7 +12531,8 @@ var EditAlunos = /*#__PURE__*/function (_React$Component) {
                 className: "form-group",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("label", {
                   children: "Data de Nascimento:"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("textarea", {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", {
+                  type: "dateTime",
                   name: "dataNasc",
                   className: "form-control highlight",
                   value: this.state.dataNasc,
@@ -12552,38 +12553,38 @@ var EditAlunos = /*#__PURE__*/function (_React$Component) {
                   required: true,
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("option", {
                     value: "1_ano",
-                    children: "1o ano"
+                    children: "1\xB0 ano"
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("option", {
                     value: "2_ano",
-                    children: "2o ano"
+                    children: "2\xB0 ano"
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("option", {
                     value: "3_ano",
-                    children: "3o ano"
+                    children: "3\xB0 ano"
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("option", {
                     value: "4_ano",
-                    children: "4o ano"
+                    children: "4\xB0 ano"
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("option", {
                     value: "5_ano",
-                    children: "5o ano"
+                    children: "5\xB0 ano"
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("option", {
                     value: "6_ano",
-                    children: "6o ano"
+                    children: "6\xB0 ano"
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("option", {
                     value: "7_ano",
-                    children: "7o ano"
+                    children: "7\xB0 ano"
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("option", {
                     value: "8_ano",
-                    children: "8o ano"
+                    children: "8\xB0 ano"
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("option", {
                     value: "9_ano",
-                    children: "9o ano"
+                    children: "9\xB0 ano"
                   })]
                 })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
                 className: "form-group",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("label", {
                   children: "CEP:"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("textarea", {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", {
                   type: "decimal",
                   name: "cep",
                   className: "form-control highlight",
@@ -12596,7 +12597,7 @@ var EditAlunos = /*#__PURE__*/function (_React$Component) {
                 className: "form-group",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("label", {
                   children: "Rua:"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("textarea", {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", {
                   type: "text",
                   name: "rua",
                   className: "form-control highlight",
@@ -12609,7 +12610,7 @@ var EditAlunos = /*#__PURE__*/function (_React$Component) {
                 className: "form-group",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("label", {
                   children: "N\xFAmero:"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("textarea", {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", {
                   type: "decimal",
                   name: "numero",
                   className: "form-control highlight",
@@ -12622,7 +12623,7 @@ var EditAlunos = /*#__PURE__*/function (_React$Component) {
                 className: "form-group",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("label", {
                   children: "Complemento:"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("textarea", {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", {
                   type: "text",
                   name: "complemento",
                   className: "form-control highlight",
@@ -12635,7 +12636,7 @@ var EditAlunos = /*#__PURE__*/function (_React$Component) {
                 className: "form-group",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("label", {
                   children: "Bairro:"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("textarea", {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", {
                   type: "text",
                   name: "bairro",
                   className: "form-control highlight",
@@ -12648,7 +12649,7 @@ var EditAlunos = /*#__PURE__*/function (_React$Component) {
                 className: "form-group",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("label", {
                   children: "Cidade:"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("textarea", {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", {
                   type: "text",
                   name: "cidade",
                   className: "form-control highlight",
@@ -12661,7 +12662,7 @@ var EditAlunos = /*#__PURE__*/function (_React$Component) {
                 className: "form-group",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("label", {
                   children: "Estado:"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("textarea", {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", {
                   type: "text",
                   name: "estado",
                   className: "form-control highlight",
@@ -12674,7 +12675,7 @@ var EditAlunos = /*#__PURE__*/function (_React$Component) {
                 className: "form-group",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("label", {
                   children: "Nome da M\xE3e:"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("textarea", {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", {
                   type: "text",
                   name: "nomeMae",
                   className: "form-control highlight",
@@ -12687,7 +12688,7 @@ var EditAlunos = /*#__PURE__*/function (_React$Component) {
                 className: "form-group",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("label", {
                   children: "CPF:"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("textarea", {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", {
                   type: "decimal",
                   name: "cpfMae",
                   className: "form-control highlight",
@@ -12700,7 +12701,7 @@ var EditAlunos = /*#__PURE__*/function (_React$Component) {
                 className: "form-group",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("label", {
                   children: "Melhor data de pagamento:"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("textarea", {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("select", {
                   type: "set",
                   name: "dataPag",
                   className: "form-control highlight",
@@ -12733,26 +12734,10 @@ var EditAlunos = /*#__PURE__*/function (_React$Component) {
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__.FontAwesomeIcon, {
                     icon: "plus",
                     className: "icon"
-                  }), "Edit Post"]
+                  }), "Atualizar"]
                 })
               })]
             })
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-          className: "right-sidebar",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-            className: "Greeting",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h2", {
-              children: greeting
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h5", {
-              children: "Bem-vindo de volta!"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("button", {
-              className: "primary",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__.FontAwesomeIcon, {
-                icon: "calendar",
-                className: "icon"
-              }), "View Events"]
-            })]
           })
         })]
       });
@@ -12808,7 +12793,7 @@ function Example() {
           exact: true,
           component: _dashboard__WEBPACK_IMPORTED_MODULE_3__.default
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Route, {
-          path: "/addAlunos",
+          path: "/createAlunos",
           exact: true,
           component: _createAlunos__WEBPACK_IMPORTED_MODULE_4__.default
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Route, {
@@ -13029,7 +13014,7 @@ var createAlunos = /*#__PURE__*/function (_React$Component) {
               case 0:
                 e.preventDefault();
                 _context.next = 3;
-                return axios__WEBPACK_IMPORTED_MODULE_2___default().post("/addAluno", _this.state);
+                return axios__WEBPACK_IMPORTED_MODULE_2___default().post("/createAlunos", _this.state);
 
               case 3:
                 res = _context.sent;
@@ -13129,7 +13114,7 @@ var createAlunos = /*#__PURE__*/function (_React$Component) {
                   children: "Nome:"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", {
                   type: "text",
-                  name: "nome",
+                  name: "name",
                   className: "form-control highlight",
                   value: this.state.name,
                   onChange: this.handleInput,
@@ -13140,7 +13125,8 @@ var createAlunos = /*#__PURE__*/function (_React$Component) {
                 className: "form-group",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("label", {
                   children: "Data de Nascimento:"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("textarea", {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", {
+                  type: "dateTime",
                   name: "dataNasc",
                   className: "form-control highlight",
                   value: this.state.dataNasc,
@@ -13161,38 +13147,38 @@ var createAlunos = /*#__PURE__*/function (_React$Component) {
                   required: true,
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("option", {
                     value: "1_ano",
-                    children: "1o ano"
+                    children: "1\xB0 ano"
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("option", {
                     value: "2_ano",
-                    children: "2o ano"
+                    children: "2\xB0 ano"
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("option", {
                     value: "3_ano",
-                    children: "3o ano"
+                    children: "3\xB0 ano"
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("option", {
                     value: "4_ano",
-                    children: "4o ano"
+                    children: "4\xB0 ano"
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("option", {
                     value: "5_ano",
-                    children: "5o ano"
+                    children: "5\xB0 ano"
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("option", {
                     value: "6_ano",
-                    children: "6o ano"
+                    children: "6\xB0 ano"
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("option", {
                     value: "7_ano",
-                    children: "7o ano"
+                    children: "7\xB0 ano"
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("option", {
                     value: "8_ano",
-                    children: "8o ano"
+                    children: "8\xB0 ano"
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("option", {
                     value: "9_ano",
-                    children: "9o ano"
+                    children: "9\xB0 ano"
                   })]
                 })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
                 className: "form-group",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("label", {
                   children: "CEP:"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("textarea", {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", {
                   type: "decimal",
                   name: "cep",
                   className: "form-control highlight",
@@ -13205,7 +13191,7 @@ var createAlunos = /*#__PURE__*/function (_React$Component) {
                 className: "form-group",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("label", {
                   children: "Rua:"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("textarea", {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", {
                   type: "text",
                   name: "rua",
                   className: "form-control highlight",
@@ -13218,7 +13204,7 @@ var createAlunos = /*#__PURE__*/function (_React$Component) {
                 className: "form-group",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("label", {
                   children: "N\xFAmero:"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("textarea", {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", {
                   type: "decimal",
                   name: "numero",
                   className: "form-control highlight",
@@ -13231,7 +13217,7 @@ var createAlunos = /*#__PURE__*/function (_React$Component) {
                 className: "form-group",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("label", {
                   children: "Complemento:"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("textarea", {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", {
                   type: "text",
                   name: "complemento",
                   className: "form-control highlight",
@@ -13244,7 +13230,7 @@ var createAlunos = /*#__PURE__*/function (_React$Component) {
                 className: "form-group",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("label", {
                   children: "Bairro:"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("textarea", {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", {
                   type: "text",
                   name: "bairro",
                   className: "form-control highlight",
@@ -13257,7 +13243,7 @@ var createAlunos = /*#__PURE__*/function (_React$Component) {
                 className: "form-group",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("label", {
                   children: "Cidade:"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("textarea", {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", {
                   type: "text",
                   name: "cidade",
                   className: "form-control highlight",
@@ -13270,7 +13256,7 @@ var createAlunos = /*#__PURE__*/function (_React$Component) {
                 className: "form-group",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("label", {
                   children: "Estado:"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("textarea", {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", {
                   type: "text",
                   name: "estado",
                   className: "form-control highlight",
@@ -13283,7 +13269,7 @@ var createAlunos = /*#__PURE__*/function (_React$Component) {
                 className: "form-group",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("label", {
                   children: "Nome da M\xE3e:"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("textarea", {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", {
                   type: "text",
                   name: "nomeMae",
                   className: "form-control highlight",
@@ -13296,7 +13282,7 @@ var createAlunos = /*#__PURE__*/function (_React$Component) {
                 className: "form-group",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("label", {
                   children: "CPF:"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("textarea", {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", {
                   type: "decimal",
                   name: "cpfMae",
                   className: "form-control highlight",
@@ -13309,7 +13295,7 @@ var createAlunos = /*#__PURE__*/function (_React$Component) {
                 className: "form-group",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("label", {
                   children: "Melhor data de pagamento:"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("textarea", {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("select", {
                   type: "set",
                   name: "dataPag",
                   className: "form-control highlight",
@@ -13346,22 +13332,6 @@ var createAlunos = /*#__PURE__*/function (_React$Component) {
                 })
               })]
             })
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-          className: "right-sidebar",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-            className: "Greeting",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h2", {
-              children: greeting
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h5", {
-              children: "Bem-vindo de volta!"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("button", {
-              className: "primary",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__.FontAwesomeIcon, {
-                icon: "calendar",
-                className: "icon"
-              }), "View Events"]
-            })]
           })
         })]
       });
@@ -13440,13 +13410,13 @@ var dashboard = /*#__PURE__*/function (_React$Component) {
       var hour = dt.getHours();
 
       if (hour >= 1 && hour < 12) {
-        greeting = 'Good Morning!!';
+        greeting = 'Bom Dia!!';
       }
 
       if (hour >= 12 && hour < 19) {
-        greeting = 'Good Afternoon!!';
+        greeting = 'Boa Tarde!!';
       } else {
-        greeting = 'Good Evening!!';
+        greeting = 'Boa Noite';
       }
 
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
@@ -13477,7 +13447,7 @@ var dashboard = /*#__PURE__*/function (_React$Component) {
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("button", {
               className: "active",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
-                to: "/addPosts",
+                to: "/createAlunos",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__.FontAwesomeIcon, {
                   icon: "pencil-alt",
                   className: "icon"
@@ -13497,22 +13467,6 @@ var dashboard = /*#__PURE__*/function (_React$Component) {
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
           className: "PostDiv",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_Alunos__WEBPACK_IMPORTED_MODULE_1__.default, {})
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-          className: "right-sidebar",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-            className: "Greeting",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h2", {
-              children: greeting
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h5", {
-              children: "Bem-vindo de volta!"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("button", {
-              className: "primary",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__.FontAwesomeIcon, {
-                icon: "calendar",
-                className: "icon"
-              }), "View Events"]
-            })]
-          })
         })]
       });
     }
@@ -17999,7 +17953,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body{\n    background-color: #193b681a;\n}\n.navbarBg{\n    background-color: white;\n    padding-left: 4.5%;\n    color: #1470ff;\n    box-shadow:0px 15px 60px #1470ff33;\n}\n.toggle_icon{\n    color: #1470ff;\n}\n.addlink{\n    display: none;\n}\n.navUl{\n    padding-right: 4.5%;\n}\n.layout{\n    width: 100%;\n    display: flex;\n    justify-content: space-evenly;\n}\n.sidebar{\n    width: 17%;\n    padding-top: 2%;\n}\n\nh1{\n    font-family: \"Lato\";\n    color: #193b68;\n}\nh3{\n    font-family: 'Lato';\n    color: #1470ff;\n}\nh2{\n    font-family: \"Lato\";\n    color: #193b68;\n    text-transform: uppercase;\n}\nh5{\n    color: #193b68;\n    font-family: \"Lato\";\n}\nh6{\n    margin-top: 5px;\n    color: #000000bf;\n}\nhr{\n    border-top: 1px solid #00000040;\n}\n\n.actionBtn{\n    width: 100%;\n    margin-top: 20%;\n    display: block;\n}\n.unactive{\n    width: 100%;\n    height: 40px;\n    color: #1479ff;\n    opacity: 0.5;\n    border: 2px solid #1479ff8e;\n    border-radius: 5px;\n    text-decoration: none;\n    margin-top: 5%;\n}\n.active{\n    width: 100%;\n    height: 40px;\n    background-color: white;\n    color: #1470ff;\n    border: 2px solid #1470ff;\n    border-radius: 5px;\n    text-align: center;\n    justify-content: center;\n    margin-top: 5%;\n    box-shadow:0px 15px 25px #1470ff66;\n}\n.active:hover, .unactive:hover{\n    color: #1470ff;\n    text-decoration: none;\n}\n.actionDiv{\n    width: 45%;\n    margin-top: 2%;\n}\n.Formdiv{\n    width: 100%;\n    background-color: white;\n    border-radius: 10px;\n    box-shadow:0px 15px 25px #1470ff66;\n    padding: 20px;\n    margin-bottom: 2%;\n}\n.PostDiv{\n    width: 45%;\n    margin-top: 2%;\n}\nlabel{\n    color: #193b68;\n}\n.highlight{\n    border: 1px solid #1470ff;\n}\n.post{\n    width: 100%;\n    background-color: white;\n    padding: 15px;\n    border-radius: 10px;\n    box-shadow:0px 15px 25px #1470ff66;\n    margin-bottom: 5%;\n}\n.primary{\n    width: 200px;\n    height: 40px;\n    border: none;\n    border-radius: 5px;\n    background-color: #1470ff;\n    box-shadow:0px 15px 25px #1470ff66;\n    color: white;\n    text-align: center;\n    justify-content: center;\n}\n.prim{\n    width: 95%;\n}\n.secondary{\n    width: 200px;\n    height: 40px;\n    border: 2px solid #1470ff;\n    border-radius: 5px;\n    background-color: white;\n    box-shadow:0px 15px 25px #1470ff66;\n    color: #1470ff;\n    text-align: center;\n    justify-content: center;\n}\n.secondary2{\n    width: 100%;\n    height: 40px;\n    border: none;\n    border-radius: 5px;\n    background-color: #193b681a;\n    box-shadow:0px 15px 25px #193b6866;\n    color: #193b68;\n    text-align: center;\n    justify-content: center;\n    margin-left: 8px;\n}\n.edit{\n    width: 90px;\n    height: 40px;\n    border: none;\n    border-radius: 5px;\n    text-align: center;\n    justify-content: center;\n    margin-left: 8px;\n    box-shadow:0px 15px 25px#ffff44a6;\n    background-color: #ffff44a6;\n}\n.color{\n    color: brown;\n}\n.color:hover{\n    color: brown;\n}\n.delete{\n    width: 90px;\n    height: 40px;\n    border: none;\n    border-radius: 5px;\n    text-align: center;\n    justify-content: center;\n    margin-left: 8px;\n    box-shadow:0px 15px 25px #ff444466;\n    background-color: #ff444466;\n    color: #ff4444;\n}\n.end{\n    display: flex;\n    justify-content: space-between;\n}\n.action2{\n    width: 200px;\n    height: 50px;\n    display: flex;\n    justify-content: space-around;\n}\n.action{\n    width: 200px;\n    height: 50px;\n    display: flex;\n    justify-content: space-around;\n}\n.icon{\n    margin: 0px 5px;\n}\n.divider{\n    width: 100%;\n    text-align: center;\n    margin: 5% 0;\n}\n.right-sidebar{\n    width: 20%;\n    margin-top: 2%;\n}\n.Greeting{\n    width: 100%;\n    background-color: white;\n    box-shadow:0px 15px 25px #1470ff66;\n    border-radius: 10px;\n    border: 2px solid #1470ff;\n    padding: 20px;\n}\np{\n    color: #000000b3;\n}\n.subinfo{\n    display: flex;\n    justify-content: space-between;\n}\n.footer{\n    margin-top: 50%;\n    width: 100%;\n    height: 70px;\n    background-color: #193b681a;\n    border-radius: 5px;\n    box-shadow: 0px 15px 25px #193b6866;\n    text-align: center;\n    display: flex;\n    padding: 10px;\n}\n.p1{\n    color: #193b68;\n}\n.addi{\n    margin-top: 10%;\n    width: 100%;\n    height: 70px;\n    background-color: #1470ff1a;\n    border-radius: 5px;\n    box-shadow: 0px 15px 25px #1470ff66;\n    text-align: center;\n    display: flex;\n    padding: 10px;\n}\n@media screen and (max-width:1000px){\n    .right-sidebar{\n        display: none;\n    }\n    .sidebar{\n        width: 25%;\n    }\n    .actionDiv, .PostDiv{\n        width: 65%;\n    }\n}\n\n@media screen and (max-width:900px){\n    .sidebar{\n        width: 20%;\n    }\n}\n\n@media screen and (max-width:760px){\n    .sidebar{\n        display: none;\n    }\n    .addlink{\n        display: block;\n    }\n    .actionDiv, .PostDiv{\n        width: 95%;\n    }\n}\n@media screen and (max-width:500px){\n    .end{\n        display: block;\n    }\n    .action{\n        padding-top: 10px;\n        width: 300px;\n    }\n    .primary, .secondary{\n        width: 300px;\n    }\n    .secondary2{\n        width: 140px;\n    }\n}\n@media screen and (max-width:450px){\n    .action{\n        width: 80%;\n    }\n    .primary, .secondary{\n        width: 80%;\n    }\n    .secondary2{\n        width: 40%;\n    }\n    .subinfo{\n        display: block;\n    }\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body{\n    background-color: #193b681a;\n}\n.navbarBg{\n    background-color: white;\n    padding-left: 4.5%;\n    color: #1470ff;\n    box-shadow:0px 15px 60px #1470ff33;\n}\n.toggle_icon{\n    color: #1470ff;\n}\n.addlink{\n    display: none;\n}\n.navUl{\n    padding-right: 4.5%;\n}\n.layout{\n    width: 100%;\n    display: flex;\n    justify-content: space-evenly;\n}\n.sidebar{\n    width: 17%;\n    padding-top: 2%;\n}\n\nh1{\n    font-family: \"Lato\";\n    font-size: larger ;\n    color: #193b68;\n}\nh3{\n    font-family: 'Lato';\n    font-size: larger ;\n    color: #1470ff;\n}\nh2{\n    font-family: \"Lato\";\n    font-size: larger ;\n    color: #193b68;\n    text-transform: uppercase;\n}\nh5{\n    color: #193b68;\n    font-size: larger ;\n    font-family: \"Lato\";\n}\nh6{\n    margin-top: 5px;\n    font-size: larger ;\n    color: #000000bf;\n}\nhr{\n    border-top: 1px solid #00000040;\n}\n\n.actionBtn{\n    width: 100%;\n    margin-top: 20%;\n    display: block;\n}\n.unactive{\n    width: 100%;\n    height: 40px;\n    color: #1479ff;\n    opacity: 0.5;\n    border: 2px solid #1479ff8e;\n    border-radius: 5px;\n    text-decoration: none;\n    margin-top: 5%;\n}\n.active{\n    width: 100%;\n    height: 40px;\n    background-color: white;\n    color: #1470ff;\n    border: 2px solid #1470ff;\n    border-radius: 5px;\n    text-align: center;\n    justify-content: center;\n    margin-top: 5%;\n    box-shadow:0px 15px 25px #1470ff66;\n}\n.active:hover, .unactive:hover{\n    color: #1470ff;\n    text-decoration: none;\n}\n.actionDiv{\n    width: 45%;\n    margin-top: 2%;\n}\n.Formdiv{\n    width: 100%;\n    background-color: white;\n    border-radius: 10px;\n    box-shadow:0px 15px 25px #1470ff66;\n    padding: 20px;\n    margin-bottom: 2%;\n}\n.PostDiv{\n    width: 45%;\n    margin-top: 2%;\n}\nlabel{\n    color: #193b68;\n}\n.highlight{\n    border: 1px solid #1470ff;\n}\n.aluno{\n    width: 100%;\n    background-color: white;\n    padding: 15px;\n    border-radius: 10px;\n    box-shadow:0px 15px 25px #1470ff66;\n    margin-bottom: 5%;\n}\n.primary{\n    width: 200px;\n    height: 40px;\n    border: none;\n    border-radius: 5px;\n    background-color: #1470ff;\n    box-shadow:0px 15px 25px #1470ff66;\n    color: white;\n    text-align: center;\n    justify-content: center;\n}\n.prim{\n    width: 95%;\n}\n.secondary{\n    width: 200px;\n    height: 40px;\n    border: 2px solid #1470ff;\n    border-radius: 5px;\n    background-color: white;\n    box-shadow:0px 15px 25px #1470ff66;\n    color: #1470ff;\n    text-align: center;\n    justify-content: center;\n}\n.secondary2{\n    width: 100%;\n    height: 40px;\n    border: none;\n    border-radius: 5px;\n    background-color: #193b681a;\n    box-shadow:0px 15px 25px #193b6866;\n    color: #193b68;\n    text-align: center;\n    justify-content: center;\n    margin-left: 8px;\n}\n.edit{\n    width: 90px;\n    height: 40px;\n    border: none;\n    border-radius: 5px;\n    text-align: center;\n    justify-content: center;\n    margin-left: 8px;\n    box-shadow:0px 15px 25px#ffff44a6;\n    background-color: #ffff44a6;\n}\n.color{\n    color: brown;\n}\n.color:hover{\n    color: brown;\n}\n.delete{\n    width: 90px;\n    height: 40px;\n    border: none;\n    border-radius: 5px;\n    text-align: center;\n    justify-content: center;\n    margin-left: 8px;\n    box-shadow:0px 15px 25px #ff444466;\n    background-color: #ff444466;\n    color: #ff4444;\n}\n.end{\n    display: flex;\n    justify-content: space-between;\n}\n.action2{\n    width: 200px;\n    height: 50px;\n    display: flex;\n    justify-content: space-around;\n}\n.action{\n    width: 200px;\n    height: 50px;\n    display: flex;\n    justify-content: space-around;\n}\n.icon{\n    margin: 0px 5px;\n}\n.divider{\n    width: 100%;\n    text-align: center;\n    margin: 5% 0;\n}\n.right-sidebar{\n    width: 20%;\n    margin-top: 2%;\n}\n.Greeting{\n    width: 100%;\n    background-color: white;\n    box-shadow:0px 15px 25px #1470ff66;\n    border-radius: 20px;\n    border: 2px solid #1470ff;\n    padding: 20px;\n}\np{\n    color: #000000b3;\n}\n.subinfo{\n    display: flex;\n    justify-content: space-between;\n}\n.footer{\n    margin-top: 50%;\n    width: 100%;\n    height: 70px;\n    background-color: #193b681a;\n    border-radius: 5px;\n    box-shadow: 0px 15px 25px #193b6866;\n    text-align: center;\n    display: flex;\n    padding: 10px;\n}\n.p1{\n    color: #193b68;\n}\n.addi{\n    margin-top: 10%;\n    width: 100%;\n    height: 70px;\n    background-color: #1470ff1a;\n    border-radius: 5px;\n    box-shadow: 0px 15px 25px #1470ff66;\n    text-align: center;\n    display: flex;\n    padding: 10px;\n}\n@media screen and (max-width:100px){\n    .right-sidebar{\n        display: none;\n    }\n    .sidebar{\n        width: 25%;\n    }\n    .actionDiv, .PostDiv{\n        width: 65%;\n    }\n}\n\n@media screen and (max-width:900px){\n    .sidebar{\n        width: 20%;\n    }\n}\n\n@media screen and (max-width:760px){\n    .sidebar{\n        display: none;\n    }\n    .addlink{\n        display: block;\n    }\n    .actionDiv, .PostDiv{\n        width: 95%;\n    }\n}\n@media screen and (max-width:500px){\n    .end{\n        display: block;\n    }\n    .action{\n        padding-top: 10px;\n        width: 300px;\n    }\n    .primary, .secondary{\n        width: 300px;\n    }\n    .secondary2{\n        width: 140px;\n    }\n}\n@media screen and (max-width:450px){\n    .action{\n        width: 80%;\n    }\n    .primary, .secondary{\n        width: 80%;\n    }\n    .secondary2{\n        width: 40%;\n    }\n    .subinfo{\n        display: block;\n    }\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

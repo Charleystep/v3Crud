@@ -124,6 +124,7 @@ class ComposerStaticInit5acd54f4d73f240f8a3c1191272a435f
             'Laravel\\Ui\\' => 11,
             'Laravel\\Tinker\\' => 15,
             'Laravel\\Sail\\' => 13,
+            'LaravelLegends\\PtBrValidator\\' => 29,
         ),
         'I' => 
         array (
@@ -392,6 +393,10 @@ class ComposerStaticInit5acd54f4d73f240f8a3c1191272a435f
         array (
             0 => __DIR__ . '/..' . '/laravel/sail/src',
         ),
+        'LaravelLegends\\PtBrValidator\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laravellegends/pt-br-validator/src/pt-br-validator',
+        ),
         'Illuminate\\Support\\' => 
         array (
             0 => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Macroable',
@@ -523,7 +528,7 @@ class ComposerStaticInit5acd54f4d73f240f8a3c1191272a435f
         'App\\Http\\Middleware\\TrustHosts' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustHosts.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
-        'App\\Models\\Alunos' => __DIR__ . '/../..' . '/app/Models/Alunos.php',
+        'App\\Models\\Aluno' => __DIR__ . '/../..' . '/app/Models/Aluno.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
@@ -2564,6 +2569,24 @@ class ComposerStaticInit5acd54f4d73f240f8a3c1191272a435f
         'Illuminate\\View\\ViewName' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/View/ViewName.php',
         'Illuminate\\View\\ViewServiceProvider' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/View/ViewServiceProvider.php',
         'JsonException' => __DIR__ . '/..' . '/symfony/polyfill-php73/Resources/stubs/JsonException.php',
+        'LaravelLegends\\PtBrValidator\\Rules\\Celular' => __DIR__ . '/..' . '/laravellegends/pt-br-validator/src/pt-br-validator/Rules/Celular.php',
+        'LaravelLegends\\PtBrValidator\\Rules\\CelularComCodigo' => __DIR__ . '/..' . '/laravellegends/pt-br-validator/src/pt-br-validator/Rules/CelularComCodigo.php',
+        'LaravelLegends\\PtBrValidator\\Rules\\CelularComDdd' => __DIR__ . '/..' . '/laravellegends/pt-br-validator/src/pt-br-validator/Rules/CelularComDdd.php',
+        'LaravelLegends\\PtBrValidator\\Rules\\Cnh' => __DIR__ . '/..' . '/laravellegends/pt-br-validator/src/pt-br-validator/Rules/Cnh.php',
+        'LaravelLegends\\PtBrValidator\\Rules\\Cnpj' => __DIR__ . '/..' . '/laravellegends/pt-br-validator/src/pt-br-validator/Rules/Cnpj.php',
+        'LaravelLegends\\PtBrValidator\\Rules\\Cpf' => __DIR__ . '/..' . '/laravellegends/pt-br-validator/src/pt-br-validator/Rules/Cpf.php',
+        'LaravelLegends\\PtBrValidator\\Rules\\CpfOuCnpj' => __DIR__ . '/..' . '/laravellegends/pt-br-validator/src/pt-br-validator/Rules/CpfOuCnpj.php',
+        'LaravelLegends\\PtBrValidator\\Rules\\FormatoCep' => __DIR__ . '/..' . '/laravellegends/pt-br-validator/src/pt-br-validator/Rules/FormatoCep.php',
+        'LaravelLegends\\PtBrValidator\\Rules\\FormatoCnpj' => __DIR__ . '/..' . '/laravellegends/pt-br-validator/src/pt-br-validator/Rules/FormatoCnpj.php',
+        'LaravelLegends\\PtBrValidator\\Rules\\FormatoCpf' => __DIR__ . '/..' . '/laravellegends/pt-br-validator/src/pt-br-validator/Rules/FormatoCpf.php',
+        'LaravelLegends\\PtBrValidator\\Rules\\FormatoCpfOuCnpj' => __DIR__ . '/..' . '/laravellegends/pt-br-validator/src/pt-br-validator/Rules/FormatoCpfOuCnpj.php',
+        'LaravelLegends\\PtBrValidator\\Rules\\FormatoPis' => __DIR__ . '/..' . '/laravellegends/pt-br-validator/src/pt-br-validator/Rules/FormatoPis.php',
+        'LaravelLegends\\PtBrValidator\\Rules\\FormatoPlacaDeVeiculo' => __DIR__ . '/..' . '/laravellegends/pt-br-validator/src/pt-br-validator/Rules/FormatoPlacaDeVeiculo.php',
+        'LaravelLegends\\PtBrValidator\\Rules\\Pis' => __DIR__ . '/..' . '/laravellegends/pt-br-validator/src/pt-br-validator/Rules/Pis.php',
+        'LaravelLegends\\PtBrValidator\\Rules\\Telefone' => __DIR__ . '/..' . '/laravellegends/pt-br-validator/src/pt-br-validator/Rules/Telefone.php',
+        'LaravelLegends\\PtBrValidator\\Rules\\TelefoneComCodigo' => __DIR__ . '/..' . '/laravellegends/pt-br-validator/src/pt-br-validator/Rules/TelefoneComCodigo.php',
+        'LaravelLegends\\PtBrValidator\\Rules\\TelefoneComDdd' => __DIR__ . '/..' . '/laravellegends/pt-br-validator/src/pt-br-validator/Rules/TelefoneComDdd.php',
+        'LaravelLegends\\PtBrValidator\\ValidatorProvider' => __DIR__ . '/..' . '/laravellegends/pt-br-validator/src/pt-br-validator/ValidatorProvider.php',
         'Laravel\\Sail\\Console\\InstallCommand' => __DIR__ . '/..' . '/laravel/sail/src/Console/InstallCommand.php',
         'Laravel\\Sail\\Console\\PublishCommand' => __DIR__ . '/..' . '/laravel/sail/src/Console/PublishCommand.php',
         'Laravel\\Sail\\SailServiceProvider' => __DIR__ . '/..' . '/laravel/sail/src/SailServiceProvider.php',

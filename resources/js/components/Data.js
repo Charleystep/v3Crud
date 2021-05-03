@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 class Data extends React.Component {
-    delPost = (id) => {
+    deleteAluno = (id) => {
         alert("Are You Want To Delete This Aluno");
         this.props.deleteAluno(id);
     }
@@ -14,9 +14,7 @@ class Data extends React.Component {
                 <div className="cardHeader">
                     <h2>{alunos.name}</h2>
                     <div className="subinfo">
-                        <h6><FontAwesomeIcon icon="calendar" className="icon" />
-
-                        </h6>
+                        <h6><FontAwesomeIcon icon="calendar" className="icon" /></h6>
                         <h6><FontAwesomeIcon icon="flag" className="icon" />{alunos.dataNasc}</h6>
                     </div>
                 </div>
@@ -29,8 +27,8 @@ class Data extends React.Component {
                 <div className="cardFooter end">
                     <button className="primary"><FontAwesomeIcon icon="share" className="icon" />Share</button>
                     <div className="action">
-                        <button className="edit"><Link className="color" to={`/edit/${alunos.id}`}><FontAwesomeIcon icon="edit" className="icon" />Edit</Link></button>
-                        <button className="delete" onClick={() => this.delPost(alunos.id)}><FontAwesomeIcon icon="trash-alt" className="icon" />Delete</button>
+                        <button className="edit"><Link className="color" to={`/edit/${alunos.id}`}><FontAwesomeIcon icon="edit" className="icon" />Atualizar</Link></button>
+                        <button className="delete" onClick={() => this.deleteAluno(alunos.id)}><FontAwesomeIcon icon="trash-alt" className="icon" />Deletar</button>
                     </div>
                 </div>
             </div>

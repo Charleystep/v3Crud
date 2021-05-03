@@ -9,7 +9,7 @@ class Alunos extends React.Component {
         loading: true,
     }
     fetchAlunos = async () => {
-        const res = await Axios.get("/addAluno");
+        const res = await Axios.get("/createAlunos");
         if (res.data.status === 200) {
             this.setState({ alunos: res.data.alunos });
             this.setState({ loading: false });
@@ -20,7 +20,7 @@ class Alunos extends React.Component {
     }
 
     deleteAluno = async (id) => {
-        const res = await Axios.delete(`/addAluno/${id}`);
+        const res = await Axios.delete(`/createAlunos/${id}`);
         if (res.data.status === 200) {
             this.fetchAlunos();
         }
@@ -34,7 +34,7 @@ class Alunos extends React.Component {
             return (
                 <div>
                     {this.state.alunos.map(alunos => (
-                        <Data alunos={alunos} key={alunos.id} deletePost={this.deletePost} />
+                        <Data alunos={alunos} key={alunos.id} deleteAluno={this.deleteAluno} />
                     ))}
                 </div>
             )

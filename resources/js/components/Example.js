@@ -13,7 +13,7 @@ function Example() {
             <>
                 <Switch>
                     <Route path="/dashboard" exact component={dashboard} />
-                    <Route path="/addAlunos" exact component={createAlunos} />
+                    <Route path="/createAlunos" exact component={createAlunos} />
                     <Route path="/edit/:id" exact component={EditAlunos} />
                 </Switch>
             </>

@@ -76,7 +76,7 @@ class alunoController extends Controller
     public function edit($id)
     {
         $alunos = Aluno::find($id);
-        return response()->json(['status' => 200, 'alunos' => $alunos  ]);
+        return response()->json(['status' => 200, 'alunos' => $alunos]);
     }
 
     /**
