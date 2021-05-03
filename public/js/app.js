@@ -12823,8 +12823,8 @@ function Example() {
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Example);
 
-if (document.getElementById('Example')) {
-  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(Example, {}), document.getElementById('Example'));
+if (document.getElementById('example')) {
+  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(Example, {}), document.getElementById('example'));
 }
 
 /***/ }),
@@ -13371,7 +13371,7 @@ var createAlunos = /*#__PURE__*/function (_React$Component) {
   return createAlunos;
 }(react__WEBPACK_IMPORTED_MODULE_1__.Component);
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (createAluno);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (createAlunos);
 
 /***/ }),
 

@@ -176,4 +176,4 @@ class createAlunos extends React.Component {
     }
 }
 
-export default createAluno;
+export default createAlunos;
